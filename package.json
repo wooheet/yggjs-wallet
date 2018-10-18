@@ -1,0 +1,41 @@
+{
+  "name": "ygg-wallet",
+  "version": "1.0.0",
+  "description": "yggdrash javascrypt wallet",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wooheet/yggjs-wallet.git"
+  },
+  "keywords": [
+    "yggdrash",
+    "wallet"
+  ],
+  "author": "tedy <tedy@r2v.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wooheet/yggjs-wallet/issues"
+  },
+  "homepage": "https://github.com/wooheet/yggjs-wallet#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "bn.js": "^4.11.8",
+    "bs58check": "^2.1.2",
+    "create-hash": "^1.2.0",
+    "crypto": "^1.0.1",
+    "keccak": "^1.4.0",
+    "rlp": "^2.1.0",
+    "safe-buffer": "^5.1.2",
+    "scrypt.js": "^0.2.0",
+    "secp256k1": "^3.5.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "mocha": "^5.2.0"
+  }
+}
