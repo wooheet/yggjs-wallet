@@ -2,7 +2,7 @@
   "name": "ygg-wallet",
   "version": "1.0.0",
   "description": "yggdrash javascrypt wallet",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
