@@ -9,6 +9,7 @@ var rlp = require('rlp');
 var BN = require('bn.js');
 var createHash = require('create-hash');
 var Buffer = require('safe-buffer').Buffer;
+Object.assign(exports, require('./util'))
 
 /**
  * the max integer that this VM can handle (a ```BN```)
