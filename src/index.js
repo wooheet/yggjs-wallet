@@ -109,7 +109,6 @@ Wallet.prototype.getChecksumAddressString = function () {
   return yggUtil.toChecksumAddress(this.getAddressString());
 };
 
-// https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition
 Wallet.prototype.toV3 = function (password, opts) {
   assert(this._privKey, 'This is a public key only wallet');
 
@@ -195,7 +194,6 @@ Wallet.fromPublicKey = function (pub, nonStrict) {
 Wallet.fromExtendedPublicKey = function (pub) {
   assert(pub.slice(0, 4) === 'xpub', 'Not an extended public key');
   pub = bs58check.decode(pub).slice(45);
-  // Convert to an Ethereum public key
   return Wallet.fromPublicKey(pub, true);
 };
 
@@ -210,7 +208,6 @@ Wallet.fromExtendedPrivateKey = function (priv) {
   return Wallet.fromPrivateKey(tmp.slice(46));
 };
 
-// https://github.com/ethereum/go-ethereum/wiki/Passphrase-protected-key-store-spec
 Wallet.fromV1 = function (input, password) {
   assert(typeof password === 'string');
   var json = (typeof input === 'undefined' ? 'undefined' : _typeof(input)) === 'object' ? input : JSON.parse(input);
@@ -280,10 +277,6 @@ Wallet.fromV3 = function (input, password, nonStrict) {
   return new Wallet(seed);
 };
 
-/*
- * Based on https://github.com/ethereum/pyethsaletool/blob/master/pyethsaletool.py
- * JSON fields: encseed, ethaddr, btcaddr, email
- */
 Wallet.fromEthSale = function (input, password) {
   assert(typeof password === 'string');
   var json = (typeof input === 'undefined' ? 'undefined' : _typeof(input)) === 'object' ? input : JSON.parse(input);

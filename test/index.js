@@ -4,7 +4,7 @@ var assert = require('assert');
 var Buffer = require('safe-buffer').Buffer;
 var Wallet = require('../');
 var Thirdparty = require('../thirdparty.js');
-var ethUtil = require('ethereumjs-util');
+var ethUtil = require('../src/utils');
 
 var fixturePrivateKey = 'efca4cdd31923b50f4214af5d2ae10e7ac45a5019e9431cc195482d707485378';
 var fixturePrivateKeyStr = '0x' + fixturePrivateKey;
@@ -223,7 +223,6 @@ describe('.fromV3()', function () {
 });
 
 describe('.fromEthSale()', function () {
-  // Generated using https://github.com/ethereum/pyethsaletool/ [4afd19ad60cee8d09b645555180bc3a7c8a25b67]
   var json = '{"encseed": "81ffdfaf2736310ce87df268b53169783e8420b98f3405fb9364b96ac0feebfb62f4cf31e0d25f1ded61f083514dd98c3ce1a14a24d7618fd513b6d97044725c7d2e08a7d9c2061f2c8a05af01f06755c252f04cab20fee2a4778130440a9344", "ethaddr": "22f8c5dd4a0a9d59d580667868df2da9592ab292", "email": "hello@ethereum.org", "btcaddr": "1DHW32MFwHxU2nk2SLAQq55eqFotT9jWcq"}';
   it('should work', function () {
     var wallet = Wallet.fromEthSale(json, 'testtest');
@@ -264,7 +263,7 @@ describe('.fromKryptoKit()', function () {
 
 describe('.fromQuorumWallet()', function () {
   it('should work', function () {
-    var wallet = Thirdparty.fromQuorumWallet('testtesttest', 'ethereumjs-wallet');
+    var wallet = Thirdparty.fromQuorumWallet('testtesttest', 'wallet');
     assert.equal(wallet.getAddressString(), '0x1b86ccc22e8f137f204a41a23033541242a48815');
   });
 });
