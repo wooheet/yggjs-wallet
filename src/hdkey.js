@@ -1,6 +1,6 @@
 'use strict';
 
-var HDKey = require('hdkey');
+var HDKey = require('./utils/hdkey');
 var Wallet = require('./index.js');
 
 function EthereumHDKey() {}
