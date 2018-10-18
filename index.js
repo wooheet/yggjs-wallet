@@ -1,6 +1,6 @@
 var wallet = require('./src/index');
 var hdkey = require('./src/hdkey');
-var utils = require('./src/utils');
+var utils = require('./yggjs-utils');
 
 module.exports = {
     wallet,
