@@ -1,5 +1,5 @@
 {
-  "name": "ygg-wallet",
+  "name": "yggjs-wallet",
   "version": "1.0.0",
   "description": "yggdrash javascrypt wallet",
   "main": "index.js",
