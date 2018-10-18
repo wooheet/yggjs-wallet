@@ -3,7 +3,7 @@
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var Buffer = require('safe-buffer').Buffer;
-var yggUtil = require('./utils');
+var yggUtil = require('../yggjs-utils');
 var crypto = require('crypto');
 var scryptsy = require('scrypt.js');
 var uuidv4 = require('uuid/v4');
