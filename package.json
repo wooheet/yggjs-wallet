@@ -4,7 +4,8 @@
   "description": "yggdrash javascrypt wallet",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build-es5": "babel index.js -w -d es5"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
     "mocha": "^5.2.0"
   }
 }
